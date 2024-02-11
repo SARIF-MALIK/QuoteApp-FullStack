@@ -3,10 +3,10 @@ import styles from './Quote.module.css'
 
 const Quote = (props) => {
   return (
-    <li>
+    <li className={styles.quote}>
         <span>
-            <p>props.text</p>
-            <p>props.author</p>
+            <p>{props.text}</p>
+            <h3>{props.author}</h3>
         </span>
         <button>View full Quote</button>
     </li>

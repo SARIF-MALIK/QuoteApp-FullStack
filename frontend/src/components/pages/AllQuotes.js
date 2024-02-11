@@ -15,9 +15,9 @@ function AllQuotes() {
   return (
     <div>
       <h1>AllQuotes</h1>
-      {/* <ul>
+      <ul>
         {
-          quotes.map((quote, idx)=>{
+          quotes?.map((quote, idx)=>{
             return <Quote  
               key={idx}
               author={quote.author}
@@ -25,7 +25,7 @@ function AllQuotes() {
             />
           })
         }
-      </ul> */}
+      </ul>
 
     </div>
     
