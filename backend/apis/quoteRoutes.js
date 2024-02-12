@@ -15,8 +15,15 @@ router.get('/allquotes', async(req, res)=>{
 
 router.post('/addquotes',async (req, res)=>{
     let {text, author} = req.body; 
-    await Quotes.create({text, author}); 
+    await Quotes.create({author, text}); 
     res.status(201).json({msg: "new quote added successfully"})
+})
+
+router.get('/quotes/:id',async (req, res)=>{
+    let {id} = req.params; 
+    const quote = await Quote.findById(id);
+    res.status(200).json(quote); 
+    
 })
 
 module.exports = router; 

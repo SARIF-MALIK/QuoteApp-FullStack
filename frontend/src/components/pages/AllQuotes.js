@@ -19,9 +19,10 @@ function AllQuotes() {
         {
           quotes?.map((quote, idx)=>{
             return <Quote  
-              key={idx}
+              key={quote._id}
               author={quote.author}
               text={quote.text}
+              id={quote._id}
             />
           })
         }
